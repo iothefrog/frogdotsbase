@@ -1,0 +1,4 @@
+#!/bin/bash
+# run dwm with provided positions
+
+dmenu_run -x 1070 -y 550 -z 400

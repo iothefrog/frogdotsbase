@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# nvidia-settings -l & #uncomment for nvidia users to load config at startup
+setbg & #restore wallpaper
+# wal -R -n & #restore colours
+xrandr --dpi 96 &		#set dpi
+#xrdb ${XDG_CONFIG_HOME:-$HOME/.config}/x11/xresources & xrdbpid=$!	
+remaps &		#remap script
+picom --xrender-sync --xrender-sync-fence --experimental-backends & #picom
+autostart="pipewire pipewire-pulse mpd dwmblocks"
+for program in $autostart; do
+	pidof -s "$program" || setsid -f "$program"
+done >/dev/null 2>&1
+
+# [ -n "$xrdbpid" ] && wait "$xrdbpid"

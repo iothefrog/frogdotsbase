@@ -1,0 +1,4 @@
+PS1='\[\e[0;1;38;5;196m\][\[\e[0;1;38;5;196m\]!\[\e[0;1;38;5;98m\]\u\[\e[0;1;38;5;182m\]@\[\e[0;1;38;5;175m\]\h\[\e[0;1m\]💖\[\e[0;1;38;5;111m\]\w\[\e[0;1;38;5;196m\]]\[\e[0;1;38;5;183m\]➤ \[\e[0m\]'
+# source /home/[your user here]/.config/shell/aliasrc
+# source /home/[your user here]/.config/shell/rootprofile
+# cd ~

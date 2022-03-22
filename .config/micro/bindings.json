@@ -1,0 +1,9 @@
+{
+    "Alt-/": "lua:comment.comment",
+    "Ctrl-L": "command:lower",
+    "Ctrl-N": "command:tree",
+    "Ctrl-U": "command:upper",
+    "CtrlUnderscore": "lua:comment.comment",
+    "F4": "command:jumptag",
+    "F5": "lua:wc.wordCount"
+}

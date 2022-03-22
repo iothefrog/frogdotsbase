@@ -1,0 +1,98 @@
+# Verbosity
+alias \
+		cp="cp -iv" \
+		mv="mv -iv" \
+		rm="rm -vI" \
+		bc="bc -ql" \
+		mkd="mkdir -pv" \
+		ffmpeg="ffmpeg -hide_banner"
+
+# Colorize commands when possible.
+alias \
+		ls="ls -hN --color=auto --group-directories-first" \
+		la="ls -hNA --color=auto --group-directories-first" \
+		cla="clear ; nf ; ls -hNa --color=auto --group-directories-first" \
+		grep="grep --color=auto" \
+		diff="diff --color=auto" \
+		ccat="highlight --out-format=ansi"
+
+#music controls
+alias \
+		m="ncmpcpp" \
+		pause="mpc pause" \
+		play="mpc play" \
+		next="mpc next" \
+		prev="mpc prev" 
+
+
+#shortened because long
+alias \
+		rb="reboot" \
+		yt="yt-dlp --add-metadata -i" \
+		yta="yt -x -f bestaudio/best" \
+		gr="wal -i /home/io/.local/share/img/bg/husLjPl-frog-backgrounds.jpg -n" \
+		ytv="youtube-viewer" 
+
+#editing & configs
+alias \
+		v="micro" \
+		e="micro" \
+		es="sudo micro" \
+		ez="e ~/.zshrc" \
+		esp="e ~/.config/shell/profile" \
+		erp="e ~/.config/shell/rootprofile" \
+		ex="e ~/.xinitrc" \
+		exp="e ~/.xprofile" \
+		exr="e ~/.xresources" \
+		en="e ~/.config/neofetch/config.conf" \
+		elf="e ~.config/lf/lfrc" \
+		ep="e ~/.config/picom/picom.conf" \
+		ea="e ~/.config/shell/aliasrc" \
+		eb="e ~/.bashrc" \
+		erb="e ~/.config/shell/rootbashrc" 
+		
+#terminal hacks
+alias \
+		c="clear ; nf" \
+		d="dust -x" \
+		z="exec zsh" \
+		b="exec bash" \
+		tt="btop" \
+		nt="nvtop" \
+		ht="htop" \
+		f="lfub" \
+		lf="lfub" \
+		l="lfcd" \
+		fs="sudo lfub" 
+
+#package management
+alias \
+		up="pacman -Sy && paru -Su" \
+		upd="pacman -Syu " \
+		p="pacman" \
+		pr="pacman -R" \
+		prc="pacman -Rnsc" \
+		pi="pacman -S" \
+		pii="paru -S" \
+		y="yay" \
+		yi="yay -S" \
+		pc="sudo paccache -r -k1 -u -vvv" 
+
+#building dwm etc.
+alias \
+		dblock="sudo make install && { killall -q dwmblocks;setsid dwmblocks &}" \
+		mki="sudo make clean install" \
+		srcdwm="cd /home/io/.local/src/dwm/" \
+		src="cd /home/io/.local/src/" \
+		ec="e config.h" 
+
+#shortcuts
+alias \
+		nf="neofetch --sixel" \
+		nfd="neofetch --config ~/.config/neofetch/config-disks.conf --sixel" \
+		q="cd $HOME" \
+		qq="cd $HOME ; c" \
+		s="startx" \
+		rmm="rm -rf" \
+		rmmm="sudo rm -rf" \
+		ql="cd $HOME ; cla" 

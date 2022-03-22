@@ -1,0 +1,28 @@
+#!/bin/bash
+
+function configmenu {
+	options="shell profile\naliasrc\nzshrc\nxprofile\nxinitrc\nxresources\nneofetch\npicom\ncancel\n"
+	selected=$(echo -e $options | dmenu -x 1070 -y 550 -z 400 )
+	if [[ $selected =  "shell profile" ]]; then
+		st -e micro ~/.config/shell/profile
+	elif [[ $selected = "aliasrc" ]]; then
+		st -e micro ~/.config/shell/aliasrc
+	elif [[ $selected = "zshrc" ]]; then
+		st -e micro ~/.config/zsh/.zshrc
+	elif [[ $selected = "xprofile" ]]; then
+		st -e micro ~/.config/x11/xprofile
+	elif [[ $selected = "xinitrc" ]]; then
+		st -e micro ~/.config/x11/xinitrc
+	elif [[ $selected = "xresources" ]]; then
+		st -e micro ~/.config/x11/xresources
+	elif [[ $selected = "neofetch" ]]; then
+		st -e micro ~/.config/neofetch/config.conf
+	elif [[ $selected = "picom" ]]; then
+		st -e micro ~/.config/picom/picom.conf
+	elif [[ $selected = "cancel" ]]; then
+		return
+	fi
+}
+
+
+configmenu

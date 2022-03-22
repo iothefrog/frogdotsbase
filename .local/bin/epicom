@@ -1,0 +1,2 @@
+#!/bin/bash
+picom --xrender-sync --xrender-sync-fence --experimental-backends &

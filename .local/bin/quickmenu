@@ -1,0 +1,28 @@
+#!/bin/bash
+
+function quickmenu {
+	options="bluetooth\nsteam\ntheme\nconfig menu\nfiles\nbrowser\nmusic player\nrenew dwmblocks\ncancel\n"
+	selected=$(echo -e $options | dmenu -x 1070 -y 550 -z 400 )
+	if [[ $selected =  "renew dwmblocks" ]]; then
+		redwmblocks 
+	elif [[ $selected = "music player" ]]; then
+		st -e ncmpcpp
+	elif [[ $selected = "theme" ]]; then
+		lxappearance
+	elif [[ $selected = "config menu" ]]; then
+		 configmenu
+	elif [[ $selected = "bluetooth" ]]; then
+		 btmenu
+	elif [[ $selected = "files" ]]; then
+		 pcmanfm
+	elif [[ $selected = "steam" ]]; then
+		 steam
+	elif [[ $selected = "browser" ]]; then
+		 librewolf
+	elif [[ $selected = "cancel" ]]; then
+		return
+	fi
+}
+
+
+quickmenu

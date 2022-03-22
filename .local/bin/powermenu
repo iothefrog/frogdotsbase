@@ -1,0 +1,22 @@
+#!/bin/bash
+
+function powermenu {
+	options="cancel\nshutdown\nreboot\nscreen off\nleave dwm\nrenew dwm\n"
+	selected=$(echo -e $options | dmenu -x 1070 -y 550 -z 400 )
+	if [[ $selected =  "shutdown" ]]; then
+		sudo systemctl poweroff 
+	elif [[ $selected = "reboot" ]]; then
+		sudo systemctl reboot
+	elif [[ $selected = "screen off" ]]; then
+		xset dpms force off
+	elif [[ $selected = "leave dwm" ]]; then
+		 kill -TERM "$(pgrep -u "$USER" "\bdwm$")"
+	elif [[ $selected = "renew dwm" ]]; then
+		kill -HUP "$(pgrep -u "$USER" "\bdwm$")"
+	elif [[ $selected = "cancel" ]]; then
+		return
+	fi
+}
+
+
+powermenu

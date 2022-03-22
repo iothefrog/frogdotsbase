@@ -1,0 +1,18 @@
+neofetch --sixel &&
+PS1='\[\e[0;1;38;5;34m\][\[\e[0;1;38;5;98m\]\u\[\e[0;1;38;5;182m\]@\[\e[0;1;38;5;175m\]\h\[\e[0;1m\]💖\[\e[0;1;38;5;111m\]\w\[\e[0;1;38;5;34m\]]\[\e[0;1;38;5;183m\]➤ \[\e[0m\]'
+source ~/.config/shell/aliasrc
+source ~/.config/shell/profile
+
+for command in ln virsh  blkid  gparted mount umount sv pacman updatedb su shutdown poweroff reboot powerpill ; do
+	alias $command="sudo $command"
+done; unset command
+lfcd () {
+    tmp="$(mktemp)"
+    lf -last-dir-path="$tmp" "$@"
+    if [ -f "$tmp" ]; then
+        dir="$(cat "$tmp")"
+        rm -f "$tmp" >/dev/null
+        [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
+    fi
+}
+
