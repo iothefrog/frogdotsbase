@@ -12,5 +12,6 @@ ln -sf $HOME/.config/librewolf $HOME/.librewolf
 ln -sf $HOME/.local/share/img/bg/froggieesmol.png $HOME/.local/share/bg
 echo changing default shell to zsh &&
 chsh -s /bin/zsh &&
+paru -S --noconfirm --noreview noto-fonts-emoji-blob
 echo "✨🎉🎉🥳🥳 DONE 🥳🥳🎉🎉✨" &&
 echo "💖💞source files for dwm,dwmblocks and dmenu can be found in ~/.local/src💞💖" 
